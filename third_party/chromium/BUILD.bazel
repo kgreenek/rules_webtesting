@@ -26,7 +26,10 @@ web_test_archive(
     archive = "@org_chromium_chromium//file",
     extract = "build",
     named_files = select({
-        "//common/conditions:linux": {
+        "//common/conditions:linux_amd64": {
+            "CHROMIUM": "chrome-linux/chrome",
+        },
+        "//common/conditions:linux_arm64": {
             "CHROMIUM": "chrome-linux/chrome",
         },
         "//common/conditions:mac": {

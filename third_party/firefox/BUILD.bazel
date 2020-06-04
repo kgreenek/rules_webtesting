@@ -27,7 +27,10 @@ web_test_archive(
     # Firefox needs to be in a writable directory.
     extract = "run",
     named_files = select({
-        "//common/conditions:linux": {
+        "//common/conditions:linux_amd64": {
+            "FIREFOX": "firefox/firefox",
+        },
+        "//common/conditions:linux_arm64": {
             "FIREFOX": "firefox/firefox",
         },
         "//common/conditions:mac": {

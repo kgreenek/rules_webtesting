@@ -19,7 +19,8 @@ licenses(["notice"])  # Apache 2.0
 alias(
     name = "main",
     actual  = select({
-        "//common/conditions:linux": "linux_amd64_pure_stripped/main",
+        "//common/conditions:linux_amd64": "linux_amd64_pure_stripped/main",
+        "//common/conditions:linux_arm64": "linux_arm64_pure_stripped/main",
         "//common/conditions:mac": "darwin_amd64_pure_stripped/main",
         "//common/conditions:windows": "windows_amd64_pure_stripped/main.exe",
     }),

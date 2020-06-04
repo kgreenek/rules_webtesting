@@ -24,8 +24,13 @@ config_setting(
 )
 
 config_setting(
-    name = "linux",
+    name = "linux_amd64",
     values = {"cpu": "k8"},
+)
+
+config_setting(
+    name = "linux_arm64",
+    values = {"cpu": "aarch64"},
 )
 
 config_setting(
